@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import ScrollAnimation from 'react-animate-on-scroll'
 import api from '../../services/api'
-import linkApi from '../../config/linkApi.json'
 
 import Card from '../CardPortfolio'
 import { Container, Row } from '../../styles/container'
@@ -34,11 +33,11 @@ export default function Portfolio() {
                         {
                             portfolio.length > 0 && portfolio.map(data => (
                                 <Card key={ data._id }
-                                    linkImg={linkApi.link + '/images/' + data.img}
+                                    linkImg={process.env.REACT_APP_API_URL + '/images/' + data.img}
                                     type={ data.type === 1 ? 'Arte' : data.type === 2 ? 'Aplicativo Web' : 'Aplicativo Mobile' } 
                                     title={ data.title }
                                     github={ data.githubLink }
-                                    view={linkApi.link + '/images/' + data.img}
+                                    view={process.env.REACT_APP_API_URL + '/images/' + data.img}
                                 />
                             ))
                         }

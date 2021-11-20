@@ -1,6 +1,5 @@
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 import jwt from 'jsonwebtoken'
-import secretToken from '../config/auth.json'
 import api from '../services/api'
 
 import Home from '../views/Home'
@@ -18,7 +17,7 @@ function CustomRoute({ isPrivate, pageLogin, ...rest }) {
     } else if (pageLogin && token) {
         return <Redirect to="/admin" />
     } else if (isPrivate && token) {        
-        jwt.verify(token, secretToken.secret, function(err, data) {
+        jwt.verify(token, `${process.env.REACT_APP_SECRET_TOKEN}`, function(err, data) {
             if (err) {
                 localStorage.removeItem('token')
                 localStorage.removeItem('id')

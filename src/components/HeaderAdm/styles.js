@@ -1,5 +1,3 @@
-import { ButtonContent } from '../../components/Button/styles'
-
 import styled from 'styled-components'
 
 export const Acconunt = styled.div`
@@ -66,15 +64,3 @@ export const Line = styled.hr`
     margin: 25px auto;
     opacity: .3;
 `
-
-    // font-weight: 700;
-    // color: ${props => props.theme.colors.bg}!important;
-    // background: ${props => props.theme.colors.darkYellow};
-    // padding: 12px 32px;
-    // cursor: pointer;
-    // text-align: center;
-
-    // :hover {
-    //     filter: brightness(90%);
-    //     transition: .5s ease;
-    // }

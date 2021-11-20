@@ -1,8 +1,7 @@
 import axios from 'axios'
-import linkApi from '../config/linkApi.json'
 
 const api = axios.create({
-    baseURL: linkApi.link
+    baseURL: process.env.REACT_APP_API_URL
 })
 
 export default api

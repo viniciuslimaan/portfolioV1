@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Icon } from '@iconify/react'
 import { Link } from 'react-router-dom'
 import api from '../../services/api'
@@ -13,7 +13,7 @@ import {
 } from './styles'
 
 export default function HeaderAdm({ page, nameOrTitle }) {
-    const [id, setId] = useState(localStorage.getItem('id'))
+    const [id, setId] = useState()
 
     function logout() {
         localStorage.removeItem('token')
@@ -21,6 +21,10 @@ export default function HeaderAdm({ page, nameOrTitle }) {
         api.defaults.headers.Authorization = undefined
         window.location.href="/admin/login"
     }
+
+    useEffect(() => {
+        setId(localStorage.getItem('id'))
+    }, [])
 
     return(
         <>

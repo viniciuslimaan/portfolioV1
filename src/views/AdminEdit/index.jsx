@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Icon } from '@iconify/react'
 import api from '../../services/api'
-import linkApi from '../../config/linkApi.json'
 
 import Imports from '../../utils/Imports'
 import HeaderAdm from '../../components/HeaderAdm'
@@ -119,7 +118,7 @@ export default function AdminEdit({ match }) {
                         <p>Link do GitHub</p>
                         <input type="text" onChange={e => setGithub(e.target.value)} value={github || ''} />
                         <p>Imagem</p>
-                        <img src={linkApi.link + '/images/' + img} alt={title} width="300" height="300" />
+                        <img src={process.env.REACT_APP_API_URL + '/images/' + img} alt={title} width="300" height="300" />
                     </Form>
                     :
                     <Form>
