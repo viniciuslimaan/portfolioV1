@@ -37,7 +37,7 @@ export default function Portfolio() {
                                     type={ data.type === 1 ? 'Arte' : data.type === 2 ? 'Aplicativo Web' : 'Aplicativo Mobile' } 
                                     title={ data.title }
                                     github={ data.githubLink }
-                                    view={process.env.REACT_APP_API_URL + '/images/' + data.img}
+                                    view={ data.type === 1 ? process.env.REACT_APP_API_URL + '/images/' + data.img : data.deployLink }
                                 />
                             ))
                         }

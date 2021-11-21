@@ -14,6 +14,7 @@ export default function AdminCreate({ match }) {
     const [type, setType] = useState(1)
     const [img, setImg] = useState()
     const [github, setGithub] = useState('')
+    const [deployLink, setDeployLink] = useState('')
     //Admin
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
@@ -32,6 +33,7 @@ export default function AdminCreate({ match }) {
                 formData.append('type', type)
                 formData.append('img', img)
                 formData.append('githubLink', github)
+                formData.append('deployLink', deployLink)
 
                 await api.post('/portfolio', formData)
                 .then(() => {
@@ -77,6 +79,8 @@ export default function AdminCreate({ match }) {
                         <input type="file" onChange={e => setImg(e.target.files[0])} placeholder={img} />
                         <p>Link do GitHub</p>
                         <input type="text" onChange={e => setGithub(e.target.value)} value={github || ''} />
+                        <p>Deploy do projeto</p>
+                        <input type="text" onChange={e => setDeployLink(e.target.value)} value={deployLink || ''} />
                     </Form>
                     :
                     <Form>

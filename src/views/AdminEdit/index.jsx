@@ -14,6 +14,7 @@ export default function AdminEdit({ match }) {
     const [title, setTitle] = useState()
     const [type, setType] = useState()
     const [github, setGithub] = useState()
+    const [deployLink, setDeployLink] = useState()
     const [img, setImg] = useState()
     //Admin
     const [email, setEmail] = useState()
@@ -38,6 +39,7 @@ export default function AdminEdit({ match }) {
                 setTitle(response.data.title)
                 setType(response.data.type)
                 setGithub(response.data.githubLink)
+                setDeployLink(response.data.deployLink)
                 setImg(response.data.img)
             })
             .catch(error => {
@@ -68,7 +70,8 @@ export default function AdminEdit({ match }) {
                 await api.put(`/portfolio/${id}`, {
                     title,
                     type,
-                    githubLink: github
+                    githubLink: github,
+                    deployLink
                 })
                 .then(() => {
                     alert('Portfólio editado com sucesso!')
@@ -117,6 +120,8 @@ export default function AdminEdit({ match }) {
                         </select>
                         <p>Link do GitHub</p>
                         <input type="text" onChange={e => setGithub(e.target.value)} value={github || ''} />
+                        <p>Deploy do projeto</p>
+                        <input type="text" onChange={e => setDeployLink(e.target.value)} value={deployLink || ''} />
                         <p>Imagem</p>
                         <img src={process.env.REACT_APP_API_URL + '/images/' + img} alt={title} width="300" height="300" />
                     </Form>

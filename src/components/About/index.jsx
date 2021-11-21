@@ -41,6 +41,9 @@ export default function About() {
                                 <a href="https://wa.me/5514991212457" target="_blank" rel="noreferrer">
                                     <Icon icon="akar-icons:whatsapp-fill" />
                                 </a>
+                                <a href="mailto:viniciuslimaandre@hotmail.com" target="_blank" rel="noreferrer">
+                                    <Icon icon="entypo:email" />
+                                </a>
                                 <a href="https://github.com/viniciuslima21" target="_blank" rel="noreferrer">
                                     <Icon icon='akar-icons:github-fill' />
                                 </a>
