@@ -86,13 +86,13 @@ export default function Cv() {
                         <Italic>Lins (SP), 2015 - 2015</Italic>
                     </Text>
                 </CardCv>
-                <BaixarCv>
+                {/* <BaixarCv>
                     <Title>Curriculum Vitae</Title>
                     <Text>
                         Clique no botão abaixo e faça o download do meu Curriculum Vitae.
                     </Text>
                     <Button title="Download CV" />
-                </BaixarCv>
+                </BaixarCv> */}
             </ScrollAnimation>
         </Container2>
     )
