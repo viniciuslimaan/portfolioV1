@@ -25,7 +25,7 @@ export default function Skills() {
                     <Skill icon='fontisto:mysql' title='MySql' />
                     <Skill icon='simple-icons:mongodb' title='MongoDB' />
                     <Skill icon='simple-icons:git' title='Git' />
-                    <Skill icon='simple-icons:github' title='Github' />
+                    <Skill icon='simple-icons:github' title='GitHub' />
                     <Skill icon='cib:adobe-photoshop' title='Photoshop' />
                 </MySkills>
             </ScrollAnimation>

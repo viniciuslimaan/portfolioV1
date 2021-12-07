@@ -4,7 +4,7 @@ import api from '../../services/api'
 
 import Card from '../CardPortfolio'
 import { Container, Row } from '../../styles/container'
-import { Cards } from './styles'
+import { Cards, LinkGit } from './styles'
 
 export default function Portfolio() {
     const [portfolio, setPortfolio] = useState([])
@@ -43,6 +43,7 @@ export default function Portfolio() {
                         }
                     </Cards>
                 </Row>
+                <LinkGit>Você pode encontrar mais projetos no meu <a href="https://github.com/viniciuslima21" target="_blank" rel="noreferrer">GitHub</a>.</LinkGit>
             </ScrollAnimation>
         </Container>
     )

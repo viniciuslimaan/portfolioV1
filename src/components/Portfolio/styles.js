@@ -14,3 +14,15 @@ export const Cards = styled.div`
         grid-template-columns: 1fr 1fr 1fr;
     }
 `
+
+export const LinkGit = styled.div`
+    color: ${props => props.theme.colors.grey};
+    text-align: center;
+    margin-top: 25px;
+
+    a {
+        color: ${props => props.theme.colors.yellow};
+        font-weight: 600;
+        cursor: pointer;
+    }
+`
