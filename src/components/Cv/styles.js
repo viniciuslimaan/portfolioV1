@@ -32,4 +32,18 @@ export const BaixarCv = styled.div`
     p {
         margin-bottom: 25px;
     }
+
+    a {
+        font-weight: 700;
+        color: ${props => props.theme.colors.bg}!important;
+        background: ${props => props.theme.colors.darkYellow};
+        padding: 12px 32px;
+        cursor: pointer;
+        text-align: center;
+
+        :hover {
+            filter: brightness(80%);
+            transition: .5s ease;
+        }
+    }
 `

@@ -1,6 +1,6 @@
 import ScrollAnimation from 'react-animate-on-scroll'
 
-import Button from '../Button'
+import curriculum from '../../assets/curriculum.pdf'
 
 import {
     Container2,
@@ -16,7 +16,7 @@ export default function Cv() {
     return (
         <Container2>
             <ScrollAnimation animateIn='animate__animated animate__zoomIn' animateOut='animate__animated animate__zoomOut'>
-                <CardCv> 
+                <CardCv>
                     <Title>Habilidades</Title>
                     <SubTitle>Linguagens e Bancos de Dados</SubTitle>
                     <Text>HTML5, CSS3, Sass, JavaScript, Typescript, PHP e MySql.</Text>
@@ -27,20 +27,20 @@ export default function Cv() {
                     <SubTitle>Ferramentas</SubTitle>
                     <Text>Microsoft Word, Microsoft PowerPoint, Microsoft Excel, Microsoft Teams, VSCode, Adobe Photoshop, CorelDRAW, Insomnia, Figma, XAMPP, MySQL Workbench, MongoDBCompass, Git e Github.</Text>
                 </CardCv>
-                <CardCv> 
+                <CardCv>
                     <Title>Trabalho voluntário</Title>
                     <Text>
                         <Italic>Etec Lins (Fev. de 2020 - Dez. de 2020)</Italic><br />
                         Durante esse período, ajudei alunos dando aulas de reforço na área da informática. Juntamente com três amigos, desenvolvemos o site da instituição. Desenvolvi também, artes para essa instituição.
                     </Text>
                 </CardCv>
-                <CardCv> 
+                <CardCv>
                     <Title>Idiomas</Title>
                     <Text>
                         Inglês - Intermediário
                     </Text>
                 </CardCv>
-                <CardCv> 
+                <CardCv>
                     <Title>Formação acadêmica</Title>
                     <Text>
                         Curso Superior de Tecnologia em Sistemas para Internet, na Fatec Lins - Professor Antônio Seabra.<br />
@@ -51,7 +51,7 @@ export default function Cv() {
                         <Italic>2018 - 2020</Italic>
                     </Text>
                 </CardCv>
-                <CardCv> 
+                <CardCv>
                     <Title>Cursos</Title>
                     <Text>
                         Curso de Língua Inglesa, pelo CNA Idiomas.<br />
@@ -86,13 +86,13 @@ export default function Cv() {
                         <Italic>Lins (SP), 2015 - 2015</Italic>
                     </Text>
                 </CardCv>
-                {/* <BaixarCv>
+                <BaixarCv>
                     <Title>Curriculum Vitae</Title>
                     <Text>
                         Clique no botão abaixo e faça o download do meu Curriculum Vitae.
                     </Text>
-                    <Button title="Download CV" />
-                </BaixarCv> */}
+                    <a href={curriculum} download="curriculum_viniciusLima.pdf">Download CV</a>
+                </BaixarCv>
             </ScrollAnimation>
         </Container2>
     )
