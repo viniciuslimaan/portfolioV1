@@ -106,7 +106,7 @@ export default function AdminEdit({ match }) {
     return (
         <Imports>
             <Container>
-                <HeaderAdm page="edit" nameOrTitle={ match.params.edit === 'portfolio' ? title : email } /> 
+                <HeaderAdm page="edit" nameOrTitle={ match.params.edit === 'portfolio' ? title : email } />
                 { match.params.edit === 'portfolio' ?
                     <Form>
                         <p>Título</p>

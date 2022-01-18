@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom'
-import Imports from '../../utils/Imports'
+
 import AstronautImg from '../../assets/img/astronaut.png'
 import VenusImg from '../../assets/img/venus.png'
+
+import Imports from '../../utils/Imports'
 import BgStars from '../../components/BgStars'
 import Button from '../../components/Button'
 
