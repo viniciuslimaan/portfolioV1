@@ -49,7 +49,7 @@ export default function Home() {
                             <h4>Quem sou?</h4>
                             <h3>Olá, eu sou o <span>Vinícius</span>!</h3>
                             <p>
-                                Meu nome é <span>Vinícius Lima</span>, tenho 18 anos, sou formado em técnico em informática integrado ao ensino médio na Etec de Lins. Cursei informática essencial, manutenção de computadores e redes e InDesigner na Microlins. Atualmente, estou cursando o 3º semestre em Sistemas para Internet na Fatec de Lins e o 4º ano de Inglês no CNA.
+                                Meu nome é <span>Vinícius Lima</span>, tenho 19 anos, sou formado em técnico em informática integrado ao ensino médio na Etec de Lins. Cursei informática essencial, manutenção de computadores e redes e InDesigner na Microlins. Atualmente, estou cursando o 3º semestre em Sistemas para Internet na Fatec de Lins e o 4º ano de Inglês no CNA.
                                 <br />Sou apaixonado em programação e design desde meus 12 anos. Comecei programar aos 15 anos, quando ingressei na Etec de Lins e, desde então, desenvolvo aplicações Front-End e Back-End. Particularmente, gosto e utilizo design minimalista e clean em minhas aplicações.
                             </p>
                             <div id='icons'>
@@ -127,6 +127,10 @@ export default function Home() {
                         </p>
                         <p>
                             Introdução ao Git e ao GitHub, pela Digital Innovation One Inc.<br />
+                            <span>Lins (SP), 2021 - 2021</span>
+                        </p>
+                        <p>
+                            Trabalhando com Componentes em React, pela Digital Innovation One Inc.<br />
                             <span>Lins (SP), 2021 - 2021</span>
                         </p>
                         <p>
