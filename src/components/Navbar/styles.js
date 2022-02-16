@@ -22,14 +22,14 @@ export const NavbarContent = styled.div`
     @media (min-width: 1025px) { padding: 0 8vw; }
 `
 
-export const Logo = styled.div`
+export const Logo = styled.a`
     font-weight: 700;
     font-size: 2rem;
     margin: 1.5rem 0;
+    user-select: none;
 
-    span {
-        color: ${props => props.theme.colors.yellow};
-    }
+    span { color: ${props => props.theme.colors.yellow}; }
+    :hover { color: ${props => props.theme.colors.white}; }
 `
 
 export const Buttons = styled.div`
@@ -45,18 +45,14 @@ export const Button = styled.a`
     margin-left: ${props => !props.buttonHamburger && '5rem'};
     ${props => props.buttonHamburger && 'margin: 1.5rem 0'};
 
-    :hover {
-        color: ${props => props.theme.colors.yellow};
-    }
+    :hover { color: ${props => props.theme.colors.yellow}; }
 `
 
 export const Hamburger = styled.div`
     font-size: 2rem;
     @media (min-width: 1025px) { display: none; }
 
-    :hover {
-        color: ${props => props.theme.colors.yellow};
-    }
+    :hover { color: ${props => props.theme.colors.yellow}; }
 `
 
 export const ButtonsHamburger = styled.div`

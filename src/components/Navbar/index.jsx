@@ -38,7 +38,7 @@ export default function Navbar() {
     return(
         <>
             <NavbarContent changeBg={changeBg}>
-                <Logo>
+                <Logo href="./">
                     vinícius<span>.</span>lima
                 </Logo>
                 {/* Normal */}

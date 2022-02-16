@@ -39,12 +39,12 @@ export default function Home() {
             {/* ===== About ===== */}
             <Container id="about">
                 <Row>
-                    <ScrollAnimation animateIn='animate__animated animate__bounceInLeft' animateOut='animate__animated animate__bounceOutLeft'>
+                    <ScrollAnimation animateIn='animate__animated animate__bounceInLeft' animateOnce={true}>
                         <Photo>
                             <img src={MeImg} width={300} height={300} alt="Imagem de um Satélite" />
                         </Photo>
                     </ScrollAnimation>
-                    <ScrollAnimation animateIn='animate__animated animate__zoomIn' animateOut='animate__animated animate__zoomOut'>
+                    <ScrollAnimation animateIn='animate__animated animate__zoomIn' animateOnce={true}>
                         <About>
                             <h4>Quem sou?</h4>
                             <h3>Olá, eu sou o <span>Vinícius</span>!</h3>
@@ -76,7 +76,7 @@ export default function Home() {
                     </ScrollAnimation>
                 </Row>
                 {/* ===== Curriculum ===== */}
-                <ScrollAnimation animateIn='animate__animated animate__zoomIn' animateOut='animate__animated animate__zoomOut'>
+                <ScrollAnimation animateIn='animate__animated animate__zoomIn' animateOnce={true}>
                     <CardCv>
                         <h4>Habilidades</h4>
                         <h5>Linguagens e Bancos de Dados</h5>
@@ -169,11 +169,11 @@ export default function Home() {
             </Container>
             {/* ===== Skills ===== */}
             <Container id="skills">
-                <ScrollAnimation animateIn='animate__animated animate__fadeIn' animateOut='animate__animated animate__fadeOut'>
+                <ScrollAnimation animateIn='animate__animated animate__fadeIn' animateOnce={true}>
                     <h4>Habilidades</h4>
                     <h3>Algumas tecnologias que utilizo.</h3>
                 </ScrollAnimation>
-                <ScrollAnimation animateIn='animate__animated animate__zoomIn' animateOut='animate__animated animate__zoomOut'>
+                <ScrollAnimation animateIn='animate__animated animate__zoomIn' animateOnce={true}>
                     <Skills>
                         <Skill icon='simple-icons:html5' title='HTML5' />
                         <Skill icon='simple-icons:css3' title='CSS3' />
