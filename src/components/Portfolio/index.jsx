@@ -34,7 +34,7 @@ export default function Portfolio() {
                             portfolio.length > 0 && portfolio.map(data => (
                                 <Card key={ data._id }
                                     linkImg={process.env.REACT_APP_API_URL + '/images/' + data.img}
-                                    type={ data.type === 1 ? 'Arte' : data.type === 2 ? 'Aplicativo Web' : 'Aplicativo Mobile' }
+                                    type={ data.type === 1 ? 'Design' : data.type === 2 ? 'Aplicativo Web' : 'Aplicativo Mobile' }
                                     title={ data.title }
                                     github={ data.githubLink }
                                     view={ data.type === 1 ? process.env.REACT_APP_API_URL + '/images/' + data.img : data.deployLink }

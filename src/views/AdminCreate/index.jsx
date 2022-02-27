@@ -64,14 +64,14 @@ export default function AdminCreate({ match }) {
     return (
         <Imports>
             <Container>
-                <HeaderAdm page="create" nameOrTitle={ match.params.create === 'portfolio' ? 'Portfólio' : 'Admin' } /> 
+                <HeaderAdm page="create" nameOrTitle={ match.params.create === 'portfolio' ? 'Portfólio' : 'Admin' } />
                 { match.params.create === 'portfolio' ?
                     <Form enctype="multipart/form-data">
                         <p>Title</p>
                         <input type="text" onChange={e => setTitle(e.target.value)} value={title || ''} />
                         <p>Tipo</p>
                         <select onChange={e => setType(e.target.value)}>
-                            <option value={1}>Arte</option>
+                            <option value={1}>Design</option>
                             <option value={2}>Aplicativo Web</option>
                             <option value={3}>Aplicativo Mobile</option>
                         </select>

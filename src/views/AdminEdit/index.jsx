@@ -113,8 +113,8 @@ export default function AdminEdit({ match }) {
                         <input type="text" onChange={e => setTitle(e.target.value)} value={title || ''} />
                         <p>Tipo <small>(Selecione apenas se quiser mudar)</small></p>
                         <select onChange={e => setType(e.target.value)}>
-                            <option value={type}> Tipo atual: { type === 1 ? 'Arte' : type === 2 ? 'Aplicativo Web' : 'Aplicativo Mobile' }</option>
-                            <option value={1}>Arte</option>
+                            <option value={type}> Tipo atual: { type === 1 ? 'Design' : type === 2 ? 'Aplicativo Web' : 'Aplicativo Mobile' }</option>
+                            <option value={1}>Design</option>
                             <option value={2}>Aplicativo Web</option>
                             <option value={3}>Aplicativo Mobile</option>
                         </select>
