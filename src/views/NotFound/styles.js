@@ -32,6 +32,22 @@ export const Content = styled.div`
         position: absolute;
         user-select: none;
     }
+
+    a {
+        font-weight: 600;
+        background: transparent;
+        color: ${props => props.theme.colors.darkYellow};
+        border: 1px solid ${props => props.theme.colors.darkYellow};
+        padding: 12px 32px;
+        cursor: pointer;
+        margin: 5px;
+
+        &:hover {
+            color: ${props => props.theme.colors.darkBlue};
+            background: ${props => props.theme.colors.darkYellow};
+            transition: .5s ease;
+        }
+    }
 `
 
 export const Astronaut = styled.img`

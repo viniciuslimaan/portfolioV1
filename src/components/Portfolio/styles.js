@@ -18,7 +18,7 @@ export const Cards = styled.div`
 export const LinkGit = styled.div`
     color: ${props => props.theme.colors.grey};
     text-align: center;
-    margin-top: 25px;
+    margin-top: 30px;
 
     a {
         color: ${props => props.theme.colors.yellow};

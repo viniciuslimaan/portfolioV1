@@ -16,20 +16,20 @@ export default function Card(props) {
             </CardImg>
             <Type>{props.type}</Type>
             <Title>{props.title}</Title>
-            <Link 
-                href={props.github} 
-                target='_blank' 
-                disable={props.github === '' ? true : false} 
+            <Link
+                href={props.github}
+                target='_blank'
+                disable={props.github === '' ? true : false}
             >
                 <Icon icon='akar-icons:github-fill' />
             </Link>
-            <Link 
-                href={props.view} 
+            <Link
+                href={props.view}
                 target='_blank'
                 disable={props.view === '' ? true : false}
             >
-                <Icon icon="carbon:view-filled" />
+                <Icon icon="lucide:screen-share" />
             </Link>
         </CardContent>
-    ) 
+    )
 }

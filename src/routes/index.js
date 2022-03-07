@@ -3,6 +3,7 @@ import jwt from 'jsonwebtoken'
 import api from '../services/api'
 
 import Home from '../views/Home'
+import Curriculum from '../views/Curriculum'
 import Admin from '../views/Admin'
 import Login from '../views/Login'
 import AdminEdit from '../views/AdminEdit'
@@ -16,7 +17,7 @@ function CustomRoute({ isPrivate, pageLogin, ...rest }) {
         return <Redirect to="/admin/login" />
     } else if (pageLogin && token) {
         return <Redirect to="/admin" />
-    } else if (isPrivate && token) {        
+    } else if (isPrivate && token) {
         jwt.verify(token, `${process.env.REACT_APP_SECRET_TOKEN}`, function(err, data) {
             if (err) {
                 localStorage.removeItem('token')
@@ -38,6 +39,7 @@ export default function Routes() {
         <BrowserRouter>
             <Switch>
                 <CustomRoute path="/" exact component={Home} />
+                <CustomRoute path="/curriculum" exact component={Curriculum} />
                 <CustomRoute pageLogin path="/admin/login" exact component={Login} />
                 <CustomRoute isPrivate path="/admin" exact component={Admin} />
                 <CustomRoute isPrivate path="/admin/edit-:edit/:id" exact component={AdminEdit} />

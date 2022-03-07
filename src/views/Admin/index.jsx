@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Icon } from '@iconify/react'
 import api from '../../services/api'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 import Imports from '../../utils/Imports'
 import HeaderAdm from '../../components/HeaderAdm'
@@ -51,14 +53,14 @@ export default function Admin() {
                             alert('Excluído com sucesso!')
                             window.location.reload()
                         })
-                    .catch(error => alert ('Não foi possível excluir. Erro: ' + error.response.data.error))
+                    .catch(error => toast.error('Não foi possível excluir. Erro: ' + error.response.data.error))
             } else if (type === 'admin') {
                 await api.delete(`/admin/${id}`)
                     .then(() => {
                             alert('Excluído com sucesso!')
                             window.location.reload()
                         })
-                    .catch(error => alert ('Não foi possível excluir. Erro: ' + error.response.data.error))
+                    .catch(error => toast.error('Não foi possível excluir. Erro: ' + error.response.data.error))
             }
         }
     }
@@ -87,12 +89,12 @@ export default function Admin() {
                 <Table>
                     <thead>
                         <tr>
-                            { 
-                                whichShow === 'portfolio' ? 
+                            {
+                                whichShow === 'portfolio' ?
                                 <>
                                     <td>Título</td>
                                     <td>Tipo</td>
-                                </> 
+                                </>
                                 : <td>E-mail</td>
                             }
                             <td>Funções</td>
@@ -100,7 +102,7 @@ export default function Admin() {
                     </thead>
                     <tbody>
                     {
-                        whichShow === 'portfolio' ? 
+                        whichShow === 'portfolio' ?
                         //LoadPortfólios
                         portfolios.map(data => (
                             <tr key={ data._id }>
@@ -144,6 +146,7 @@ export default function Admin() {
                         { whichShow === 'portfolio' ? 'Adicionar Portfólio' : 'Adicionar Admin' }
                     </BtnCreate>
                 </Link>
+                <ToastContainer position='bottom-right' />
             </Container>
         </Imports>
     )

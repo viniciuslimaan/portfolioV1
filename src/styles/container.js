@@ -12,7 +12,7 @@ export const Container = styled.div`
         padding: 5rem 10%;
     }
     @media (min-width: 1025px) {
-        padding: 5rem 20%;
+        padding: 7rem 20%;
     }
 `
 

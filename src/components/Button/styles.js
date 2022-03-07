@@ -1,15 +1,17 @@
 import styled from 'styled-components'
 
 export const ButtonContent = styled.span`
-    font-weight: 700;
-    color: ${props => props.theme.colors.bg}!important;
+    font-weight: 600;
+    color: ${props => props.theme.colors.white};
     background: ${props => props.theme.colors.darkYellow};
+    border: 1px solid ${props => props.theme.colors.darkYellow};
     padding: 12px 32px;
-    cursor: pointer;
     text-align: center;
+    cursor: pointer;
 
-    :hover {
-        filter: brightness(80%);
+    &:hover {
+        color: ${props => props.theme.colors.darkYellow};
+        background: ${props => props.theme.colors.lightYellow};
         transition: .5s ease;
     }
 `

@@ -30,8 +30,8 @@ export default function HeaderAdm({ page, nameOrTitle }) {
         <>
             <Acconunt>
                 <NameAccount>
-                    { page === 'admin' ? <>Bem vindo, <span>Administrador</span>!</> : 
-                    page === 'create' ? <>Criando novo <span>{nameOrTitle}</span>.</> : 
+                    { page === 'admin' ? <>Bem-vindo, <span>Administrador</span>!</> :
+                    page === 'create' ? <>Criando novo <span>{nameOrTitle}</span>.</> :
                     <>Editando: <span>{nameOrTitle}</span>.</> }
                 </NameAccount>
                 <ButtonsAccount>

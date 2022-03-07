@@ -1,15 +1,21 @@
 import styled from 'styled-components'
 
 export const CardContent = styled.div`
-    max-width: 300px;
+    max-width: 320px;
 `
 
 export const CardImg = styled.div`
     img {
         width: 100%;
         height: 100%;
-        max-width: 300px;
-        max-height: 300px;
+        max-width: 320px;
+        max-height: 320px;
+        cursor: pointer;
+
+        :hover {
+            opacity: 75%;
+            transition: .5s ease;
+        }
     }
 `
 

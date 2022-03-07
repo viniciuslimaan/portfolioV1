@@ -2,18 +2,22 @@ import styled from 'styled-components'
 
 export const CardContent = styled.div`
     display: flex;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
 
-    color: ${props => props.theme.colors.grey};
+    background: ${props => props.theme.colors.lightGrey};
+    color: ${props => props.theme.colors.darkGrey};
     font-size: 3rem;
     cursor: default;
-    width: 6rem;
-    margin: 10px;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 3px;
 
     :hover {
-        color: ${props => props.theme.colors.yellow}!important;
-        transition: .5s ease;
+        background: ${props => props.theme.colors.lightYellow}!important;
+        color: ${props => props.theme.colors.darkYellow}!important;
+        transition: .3s ease;
     }
 `
 

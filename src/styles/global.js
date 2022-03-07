@@ -19,6 +19,11 @@ const GlobalStyles = createGlobalStyle`
         scroll-behavior: smooth; //Scroll suave
     }
 
+    ::selection {
+        color: ${props => props.theme.colors.lightGrey};
+        background: ${props => props.theme.colors.darkYellow};
+    }
+
     p {
         font-weight: 400;
         font-size: 1rem;
@@ -37,15 +42,20 @@ const GlobalStyles = createGlobalStyle`
     h3 {
         font-weight: 800;
         font-size: 3rem;
-        margin-bottom: 10px;
         color: ${props => props.theme.colors.white};
+        text-align: center;
+    }
+
+    p.subtitle {
+        text-align: center;
+        margin-bottom: 25px;
     }
 
     h4 {
         font-weight: 700;
         font-size: 1.2rem;
         text-transform: uppercase;
-        margin: 15px 0 -5px 0;
+        margin: 15px 0 7px 0;
         color: ${props => props.theme.colors.yellow};
     }
 

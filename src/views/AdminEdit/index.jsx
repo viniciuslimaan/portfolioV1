@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import { Icon } from '@iconify/react'
 import api from '../../services/api'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 import Imports from '../../utils/Imports'
 import HeaderAdm from '../../components/HeaderAdm'
@@ -43,8 +45,7 @@ export default function AdminEdit({ match }) {
                 setImg(response.data.img)
             })
             .catch(error => {
-                alert(error.response.data.error)
-                window.location.href="/admin"
+                toast.error(error.response.data.error)
             })
     }
 
@@ -55,17 +56,16 @@ export default function AdminEdit({ match }) {
                 setEmail(response.data.email)
             })
             .catch(error => {
-                alert(error.response.data.error)
-                window.location.href="/admin"
+                toast.error(error.response.data.error)
             })
     }
 
     async function save() {
         if (match.params.edit === 'portfolio') {
             if (!title)
-                alert('Você precisa informar o título do portfólio!')
+                toast.warning('Você precisa informar o título do portfólio!')
             else if (!type)
-                alert('Você precisa informar o tipo do portfólio!')
+                toast.warning('Você precisa informar o tipo do portfólio!')
             else {
                 await api.put(`/portfolio/${id}`, {
                     title,
@@ -74,26 +74,24 @@ export default function AdminEdit({ match }) {
                     deployLink
                 })
                 .then(() => {
-                    alert('Portfólio editado com sucesso!')
-                    window.location.href="/admin"
+                    toast.success('Portfólio editado com sucesso!')
                 })
-                .catch(error => alert(error.response.data.error))
+                .catch(error => toast.error(error.response.data.error))
             }
         } else if (match.params.edit === 'admin') {
             if (!email)
-                alert('Você precisa informar o e-mail do admin!')
+                toast.warning('Você precisa informar o e-mail do admin!')
             else if (password && password.length < 6)
-                alert('A senha precisa ter no mínimo 6 caracters!')
+                toast.warning('A senha precisa ter no mínimo 6 caracteres!')
             else {
                 await api.put(`/admin/${id}`, {
                     email,
                     password
                 })
                 .then(() => {
-                    alert('Admin editado com sucesso!')
-                    window.location.href="/admin"
+                    toast.success('Admin editado com sucesso!')
                 })
-                .catch(error => alert(error.response.data.error))
+                .catch(error => toast.error(error.response.data.error))
             }
         }
     }
@@ -137,6 +135,7 @@ export default function AdminEdit({ match }) {
                     <span><Icon icon="ant-design:save-filled" inline={true} /></span>
                     Salvar
                 </Button>
+                <ToastContainer position='bottom-right' />
             </Container>
         </Imports>
     )

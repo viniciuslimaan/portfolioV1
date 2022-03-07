@@ -8,11 +8,28 @@ const rocketFly = keyframes`
 `
 
 // Styles
-export const Services = styled.div`
+export const Breadcrumb = styled.div`
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+
+    /* background-image: linear-gradient(to bottom right, ${props => props.theme.colors.darkBlue}, ${props => props.theme.colors.blue}); */
+    margin-bottom: 25px;
+
+    hr {
+        /* width: 35%; */
+        margin-top: 10px;
+        border: 1px solid ${props => props.theme.colors.grey};
+        border-top: 0px;
+    }
+
+    p {
+        font-weight: 500;
+        font-size: 1.2rem;
+    }
+
+    a { color: ${props => props.theme.colors.white}; }
 `
 
 export const Photo = styled.div`
@@ -20,11 +37,7 @@ export const Photo = styled.div`
 `
 
 export const About = styled.div`
-    h3 {
-        text-align: left;
-        font-size: 2rem;
-        margin-bottom: 5px;
-    }
+    h3 { text-align: left; }
     h3 > span { color: ${props => props.theme.colors.yellow}; }
     p { text-align: justify; }
     span { font-weight: bold; }
@@ -38,14 +51,22 @@ export const About = styled.div`
     }
 `
 
-export const CardDownloadCv = styled.div`
-    margin-top: 75px;
-    text-align: center;
+export const CardCv = styled.div`
+    margin-top: 25px;
 
-    @media (max-width: 767px) {
-        display: flex;
-        flex-direction: column;
+    h5 {
+        font-weight: bold;
+        font-size: 1rem;
+        color: ${props => props.theme.colors.grey};
     }
+
+    p { margin-bottom: 8px; }
+    span { font-style: italic; }
+`
+
+export const CardDownloadCv = styled.div`
+    margin-top: 50px;
+    text-align: center;
 
     p { margin: 5px 0 25px 0; }
 
@@ -53,7 +74,7 @@ export const CardDownloadCv = styled.div`
         font-weight: 600;
         color: ${props => props.theme.colors.white};
         background: ${props => props.theme.colors.darkYellow};
-        border: 1px solid ${props => props.theme.colors.darkYellow};
+        border: 1.5px solid ${props => props.theme.colors.darkYellow};
         padding: 12px 32px;
         cursor: pointer;
         margin: 5px;
@@ -64,25 +85,6 @@ export const CardDownloadCv = styled.div`
             transition: .5s ease;
         }
     }
-
-    a#btnOutline {
-        background: transparent;
-        color: ${props => props.theme.colors.darkYellow};
-
-        &:hover {
-            color: ${props => props.theme.colors.bg};
-            background: ${props => props.theme.colors.darkYellow};
-            transition: .5s ease;
-        }
-    }
-`
-
-export const Skills = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
 `
 
 export const Footer = styled.div`

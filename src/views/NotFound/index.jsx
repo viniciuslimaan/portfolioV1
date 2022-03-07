@@ -5,7 +5,6 @@ import VenusImg from '../../assets/img/venus.png'
 
 import Imports from '../../utils/Imports'
 import BgStars from '../../components/BgStars'
-import Button from '../../components/Button'
 
 import { Content, Astronaut, Venus } from './styles'
 
@@ -19,7 +18,7 @@ export default function NotFound() {
                     <Astronaut src={AstronautImg} alt="Imagem de um astronauta" />
                     <Venus src={VenusImg} alt="Imagem do planeta Vênus" />
                     <Link to="/">
-                        <Button title="Voltar ao início" />
+                        Voltar ao início
                     </Link>
                 </Content>
             </BgStars>

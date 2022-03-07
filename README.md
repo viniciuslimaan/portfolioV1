@@ -4,7 +4,7 @@ Front-End do meu portfólio oficial.
 Deploy do projeto:
 https://viniciuslima.herokuapp.com/
 
-Para visualizar em seu computador use: 
+Para visualizar em seu computador use:
 
 ```
 git clone https://github.com/viniciuslima21/portfolio.git
@@ -21,3 +21,5 @@ git clone https://github.com/viniciuslima21/portfolio.git
     * React-animate-on-scroll
     * React-router-dom
     * Jsonwebtoken
+    * React-toastify
+    * Simple-react-lightbox

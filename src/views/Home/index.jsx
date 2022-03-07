@@ -1,10 +1,12 @@
 // Imports
 import ScrollAnimation from 'react-animate-on-scroll'
 import { Icon } from '@iconify/react'
+// import { Link } from 'react-router-dom'
 
 import Imports from '../../utils/Imports'
 import Navbar from '../../components/Navbar'
 import Header from '../../components/Header'
+import CardServices from '../../components/CardServices'
 import Skill from '../../components/CardSkills'
 import Portfolio from '../../components/Portfolio'
 
@@ -15,7 +17,7 @@ import ImgRocket from '../../assets/img/rocket.png'
 
 // Styles
 import {
-    CardCv,
+    Services,
     CardDownloadCv,
     Photo,
     About,
@@ -26,18 +28,58 @@ import {
 import { Container, Row } from '../../styles/container'
 
 export default function Home() {
+    // Scroll to top
     const scrollTop = () => {
-        window.scrollTo({top: 0,})
+        window.scrollTo({ top: 0, })
     }
+
+    // Getting my age
+    const myAge = new Date().getFullYear() - 2003
 
     return (
         <Imports>
             {/* ===== Navbar ===== */}
-            <Navbar></Navbar>
+            <Navbar />
             {/* ===== Header ===== */}
-            <Header></Header>
+            <Header />
+            {/* ===== Services ===== */}
+            <Container>
+                {/* <ScrollAnimation animateIn='animate__animated animate__fadeIn' animateOnce={true}>
+                    <h3>Serviços</h3>
+                    <p className="subtitle">Realizo essas atividades.</p>
+                </ScrollAnimation> */}
+                <ScrollAnimation animateIn='animate__animated animate__fadeInUp' animateOnce={true}>
+                    <Services>
+                        <CardServices>
+                            <span>
+                                <Icon icon="ph:lightbulb-filament-duotone" inline={true} />
+                            </span>
+                            <h4>Design</h4>
+                            <p>Desenho e crio logos, flyers, artes de divulgação, entre outros.</p>
+                        </CardServices>
+                        <CardServices>
+                            <span>
+                                <Icon icon="ph:desktop-duotone" inline={true} />
+                            </span>
+                            <h4>Desenvolvimento Web</h4>
+                            <p>Projeto e desenvolvo aplicações web desde um simples landing page até um e-commerce.</p>
+                        </CardServices>
+                        <CardServices>
+                            <span>
+                                <Icon icon="ph:device-mobile-duotone" inline={true} />
+                            </span>
+                            <h4>Desenvolvimento Mobile</h4>
+                            <p>Planejo e desenvolvo aplicativos mobile para Android e iOS.</p>
+                        </CardServices>
+                    </Services>
+                </ScrollAnimation>
+            </Container>
             {/* ===== About ===== */}
             <Container id="about">
+                <ScrollAnimation animateIn='animate__animated animate__fadeIn' animateOnce={true}>
+                    <h3>Quem sou?</h3>
+                    <p className="subtitle">Conheça um pouco sobre mim.</p>
+                </ScrollAnimation>
                 <Row>
                     <ScrollAnimation animateIn='animate__animated animate__bounceInLeft' animateOnce={true}>
                         <Photo>
@@ -46,11 +88,10 @@ export default function Home() {
                     </ScrollAnimation>
                     <ScrollAnimation animateIn='animate__animated animate__zoomIn' animateOnce={true}>
                         <About>
-                            <h4>Quem sou?</h4>
                             <h3>Olá, eu sou o <span>Vinícius</span>!</h3>
                             <p>
-                                Meu nome é <span>Vinícius Lima</span>, tenho 19 anos, sou formado em técnico em informática integrado ao ensino médio na Etec de Lins. Cursei informática essencial, manutenção de computadores e redes e InDesigner na Microlins. Atualmente, estou cursando o 3º semestre em Sistemas para Internet na Fatec de Lins e o 4º ano de Inglês no CNA.
-                                <br />Sou apaixonado em programação e design desde meus 12 anos. Comecei programar aos 15 anos, quando ingressei na Etec de Lins e, desde então, desenvolvo aplicações Front-End e Back-End. Particularmente, gosto e utilizo design minimalista e clean em minhas aplicações.
+                                Meu nome é <span>Vinícius Lima</span>, tenho {myAge} anos, sou formado em técnico em informática integrado ao ensino médio na Etec Lins e atualmente estou cursando tecnólogo em Sistemas para Internet na Fatec Lins.
+                                <br />Sou apaixonado por tecnologia e inovação desde pequeno, tive meu primeiro contato com programação aos 12 anos, onde eu desenvolvia scripts para jogos de computador. Comecei realmente a programar aos 15, quando ingressei na Etec Lins e, desde então, desenvolvo aplicações Front-End e Back-End. Particularmente, gosto e utilizo design minimalista e clean em minhas aplicações.
                             </p>
                             <div id='icons'>
                                 <a href="https://www.facebook.com/viniciuslimaan/" target="_blank" rel="noreferrer">
@@ -77,101 +118,22 @@ export default function Home() {
                 </Row>
                 {/* ===== Curriculum ===== */}
                 <ScrollAnimation animateIn='animate__animated animate__zoomIn' animateOnce={true}>
-                    <CardCv>
-                        <h4>Habilidades</h4>
-                        <h5>Linguagens e Bancos de Dados</h5>
-                        <p>HTML5, CSS3, Sass, JavaScript, Typescript, PHP e MySql.</p>
-                        <h5>Frameworks/Libraries</h5>
-                        <p>Bootstrap, ReactJs, NextJs, NodeJs, Styled-Components e PHPMailer.</p>
-                        <h5>Padrões de projetos</h5>
-                        <p>MVC e API RESTful.</p>
-                        <h5>Ferramentas</h5>
-                        <p>Microsoft Word, Microsoft PowerPoint, Microsoft Excel, Microsoft Teams, VSCode, Adobe Photoshop, CorelDRAW, Insomnia, Figma, XAMPP, MySQL Workbench, MongoDBCompass, Git e Github.</p>
-                    </CardCv>
-                    <CardCv>
-                        <h4>Formação acadêmica</h4>
-                        <p>
-                            Curso Superior de Tecnologia em Sistemas para Internet, na Fatec Lins - Professor Antônio Seabra.<br />
-                            <span>2021 - atualmente</span>
-                        </p>
-                        <p>
-                            Técnico em Informática Integrado ao Ensino Médio, na Etec Lins.<br />
-                            <span>2018 - 2020</span>
-                        </p>
-                    </CardCv>
-                    <CardCv>
-                        <h4>Experiência Profissional</h4>
-                        <p>
-                            <span>Freelancer - Desenvolvedor Front-End (Fev. de 2020 - Dez. de 2020)</span><br />
-                            Desenvolvimento do website da instituição.
-                        </p>
-                    </CardCv>
-                    <CardCv>
-                        <h4>Experiência de voluntariado</h4>
-                        <p>
-                            <span>Etec Lins (Fev. de 2020 - Dez. de 2020)</span><br />
-                            Durante esse período, ajudei alunos dando aulas de reforço na área da informática. Juntamente com três amigos, desenvolvemos o site da instituição. Desenvolvi também, artes para essa instituição.
-                        </p>
-                    </CardCv>
-                    <CardCv>
-                        <h4>Idiomas</h4>
-                        <p>
-                            Inglês - Intermediário
-                        </p>
-                    </CardCv>
-                    <CardCv>
-                        <h4>Cursos</h4>
-                        <p>
-                            Curso de Língua Inglesa, pelo CNA Idiomas.<br />
-                            <span>Lins (SP), 2019 - atualmente</span>
-                        </p>
-                        <p>
-                            Introdução ao Git e ao GitHub, pela Digital Innovation One Inc.<br />
-                            <span>Lins (SP), 2021 - 2021</span>
-                        </p>
-                        <p>
-                            Trabalhando com Componentes em React, pela Digital Innovation One Inc.<br />
-                            <span>Lins (SP), 2021 - 2021</span>
-                        </p>
-                        <p>
-                            Desenvolvimento de Interfaces com React, pelo Centro Paula Souza (FATEC Lins).<br />
-                            <span>Lins (SP), 2021 - 2021</span>
-                        </p>
-                        <p>
-                            Design de interfaces com Figma, pelo Centro Paula Souza (FATEC Lins).<br />
-                            <span>Lins (SP), 2021 - 2021</span>
-                        </p>
-                        <p>
-                            Curso Técnico em Informática Integrado ao Ensino Médio, pela Etec Lins.<br />
-                            <span>Lins (SP), 2018 - 2020</span>
-                        </p>
-                        <p>
-                            Curso Técnico Profissionalizante em InDesigner - Photoshop, Corel Draw e criação de material gráfico, pela Microlins.<br />
-                            <span>Lins (SP), 2016 - 2017</span>
-                        </p>
-                        <p>
-                            Técnico Profissionalizante em Montagem e manutenção de computadores e redes, pela Microlins.<br />
-                            <span>Lins (SP), 2016 - 2016</span>
-                        </p>
-                        <p>
-                            Curso Técnico Profissionalizante em Informática Essencial - Informática básica e Pacote Office, pela Microlins.<br />
-                            <span>Lins (SP), 2015 - 2015</span>
-                        </p>
-                    </CardCv>
                     <CardDownloadCv>
                         <h4>Curriculum Vitae</h4>
                         <p>
                             Clique no botão abaixo e faça o download do meu Curriculum Vitae.
+                            {/* Faça o download do meu Curriculum Vitae ou acesse online. */}
                         </p>
-                        <a href={curriculum} download="curriculum_viniciusLima.pdf">Download CV</a>
+                        <a href={curriculum} download="curriculum_viniciusLima.pdf" id="btnOutline">Download CV</a>
+                        {/* <Link to="/curriculum">CV Online</Link> */}
                     </CardDownloadCv>
                 </ScrollAnimation>
             </Container>
             {/* ===== Skills ===== */}
             <Container id="skills">
                 <ScrollAnimation animateIn='animate__animated animate__fadeIn' animateOnce={true}>
-                    <h4>Habilidades</h4>
-                    <h3>Algumas tecnologias que utilizo.</h3>
+                    <h3>Habilidades</h3>
+                    <p className="subtitle">Algumas tecnologias que utilizo.</p>
                 </ScrollAnimation>
                 <ScrollAnimation animateIn='animate__animated animate__zoomIn' animateOnce={true}>
                     <Skills>
@@ -193,7 +155,7 @@ export default function Home() {
                 </ScrollAnimation>
             </Container>
             {/* ===== Portfólio ===== */}
-            <Portfolio></Portfolio>
+            <Portfolio />
             {/* ===== Footer ===== */}
             <Footer>
                 <a href="https://github.com/viniciuslima21" target="_blank" rel="noreferrer">

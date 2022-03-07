@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { Icon } from '@iconify/react'
 import api from '../../services/api'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 import Imports from '../../utils/Imports'
 import HeaderAdm from '../../components/HeaderAdm'
@@ -22,11 +24,11 @@ export default function AdminCreate({ match }) {
     async function save() {
         if (match.params.create === 'portfolio') {
             if (!title)
-                alert('Você precisa informar o título do portfólio!')
+                toast.warning('Você precisa informar o título do portfólio!')
             else if (!type)
-                alert('Você precisa informar o tipo do portfólio!')
+                toast.warning('Você precisa informar o tipo do portfólio!')
             else if (!img)
-                alert('Você precisa inserir a imagem do portfólio!')
+                toast.warning('Você precisa inserir a imagem do portfólio!')
             else {
                 const formData = new FormData()
                 formData.append('title', title)
@@ -37,26 +39,31 @@ export default function AdminCreate({ match }) {
 
                 await api.post('/portfolio', formData)
                 .then(() => {
-                    alert('Portfólio criado com sucesso!')
-                    window.location.href="/admin"
+                    toast.success('Portfólio criado com sucesso!')
+                    setTitle()
+                    setType(1)
+                    setImg()
+                    setGithub('')
+                    setDeployLink('')
                 })
-                .catch(error => alert(error.response.data.error))
+                .catch(error => toast.error(error.response.data.error))
             }
         } else if (match.params.create === 'admin') {
             if (!email)
-                alert('Você precisa informar o e-mail do admin!')
+                toast.warning('Você precisa informar o e-mail do admin!')
             else if (!password || password.length < 6)
-                alert('A senha precisa ter no mínimo 6 caracters!')
+                toast.warning('A senha precisa ter no mínimo 6 caracteres!')
             else {
                 await api.post('/admin', {
                     email,
                     password
                 })
                 .then(() => {
-                    alert('Admin criado com sucesso!')
-                    window.location.href="/admin"
+                    toast.success('Admin criado com sucesso!')
+                    setEmail()
+                    setPassword()
                 })
-                .catch(error => alert(error.response.data.error))
+                .catch(error => toast.error(error.response.data.error))
             }
         }
     }
@@ -94,6 +101,7 @@ export default function AdminCreate({ match }) {
                     <span><Icon icon="ant-design:save-filled" inline={true} /></span>
                     Salvar
                 </Button>
+                <ToastContainer position='bottom-right' />
             </Container>
         </Imports>
     )

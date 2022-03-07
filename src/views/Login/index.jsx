@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { Icon } from '@iconify/react';
 import { Link } from 'react-router-dom'
 import api from '../../services/api'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 import Imports from '../../utils/Imports'
 
@@ -18,10 +20,10 @@ export default function Login() {
     const [password, setPassword] = useState()
 
     async function join() {
-        if (!email) 
-            alert('Você precisa inserir um e-mail!')
+        if (!email)
+            toast.warning('Você precisa inserir um e-mail!')
         else if (!password)
-            alert('Você precisa inserir uma senha!')
+            toast.warning('Você precisa inserir uma senha!')
         else {
             await api.post('/admin/login', {
                 email, password
@@ -35,7 +37,7 @@ export default function Login() {
                 alert('Logado com sucesso!')
                 window.location.href="/admin"
             })
-            .catch(error => alert(error.response.data.error))
+            .catch(error => toast.error(error.response.data.error))
         }
     }
 
@@ -47,26 +49,27 @@ export default function Login() {
                         <Icon icon="wpf:administrator" />
                     </FormTop>
                     <p>E-mail</p>
-                    <input 
-                        type="email" 
-                        placeholder="Insira seu e-mail" 
-                        onChange={e => setEmail(e.target.value)} 
-                        value={email || ''} 
+                    <input
+                        type="email"
+                        placeholder="Insira seu e-mail"
+                        onChange={e => setEmail(e.target.value)}
+                        value={email || ''}
                     />
                     <p>Senha</p>
-                    <input 
-                        type="password" 
-                        placeholder="Insira sua senha" 
-                        onChange={e => setPassword(e.target.value)} 
-                        value={password || ''} 
+                    <input
+                        type="password"
+                        placeholder="Insira sua senha"
+                        onChange={e => setPassword(e.target.value)}
+                        value={password || ''}
                     />
                     <BtnLogin onClick={join}>Login</BtnLogin>
                     <BtnBack>
                         <Link to="/">
-                            Voltar ao portfólio    
+                            Voltar ao portfólio
                         </Link>
                     </BtnBack>
                 </Form>
+                <ToastContainer position='bottom-right' />
             </Content>
         </Imports>
     )
