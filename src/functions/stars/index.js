@@ -7,11 +7,13 @@ export function CreateStars(number = 50) {
 
     const [width, setWidth] = useState(window.innerWidth)
     const [height, setHeight] = useState(window.innerHeight)
-    
+
     useEffect(() => {
         function resizeStars() {
             setWidth(window.innerWidth)
-            setHeight(window.innerHeight)
+            // Preventing the cell phone from recharging every time
+            if (window.innerHeight > 950)
+                setHeight(window.innerHeight)
         }
 
         window.addEventListener('resize', resizeStars)
@@ -23,7 +25,7 @@ export function CreateStars(number = 50) {
         const posY = Math.floor(Math.random() * height)
         const sizeStar = Math.floor(Math.random() * 2) + 1
         const randomTime = Math.floor(Math.random() * 3) + 1
-        
+
         if (randomTime === 1)
             time = 3
         else if (randomTime === 2)
