@@ -5,15 +5,18 @@ export const CardContent = styled.div`
 `
 
 export const CardImg = styled.div`
+    max-width: 320px;
+    max-height: 320px;
+    overflow: hidden;
+
     img {
         width: 100%;
         height: 100%;
-        max-width: 320px;
-        max-height: 320px;
         cursor: pointer;
 
         :hover {
             opacity: 75%;
+            transform: scale(1.1);
             transition: .5s ease;
         }
     }
