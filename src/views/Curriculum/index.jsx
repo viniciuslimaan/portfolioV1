@@ -52,10 +52,10 @@ export default function Curriculum() {
                                 <br />Sou apaixonado por tecnologia e inovação desde pequeno, tive meu primeiro contato com programação aos 12 anos, onde eu desenvolvia scripts para jogos de computador. Comecei realmente a programar aos 15, quando ingressei na Etec Lins e, desde então, desenvolvo aplicações Front-End e Back-End. Particularmente, gosto e utilizo design minimalista e clean em minhas aplicações.
                             </p>
                             <div id='icons'>
-                                <a href="https://www.facebook.com/viniciuslimaan/" target="_blank" rel="noreferrer">
+                                <a href="https://www.facebook.com/viniciuslimaan" target="_blank" rel="noreferrer">
                                     <Icon icon="brandico:facebook" />
                                 </a>
-                                <a href="https://www.instagram.com/viniciuslimaan/" target="_blank" rel="noreferrer">
+                                <a href="https://www.instagram.com/viniciuslimaan" target="_blank" rel="noreferrer">
                                     <Icon icon="akar-icons:instagram-fill" />
                                 </a>
                                 <a href="https://wa.me/5514991212457" target="_blank" rel="noreferrer">
@@ -64,10 +64,10 @@ export default function Curriculum() {
                                 <a href="mailto:viniciuslimaandre@hotmail.com" target="_blank" rel="noreferrer">
                                     <Icon icon="entypo:email" />
                                 </a>
-                                <a href="https://github.com/viniciuslima21" target="_blank" rel="noreferrer">
+                                <a href="https://github.com/viniciuslimaan" target="_blank" rel="noreferrer">
                                     <Icon icon='akar-icons:github-fill' />
                                 </a>
-                                <a href="https://www.linkedin.com/in/viniciuslima21/" target="_blank" rel="noreferrer">
+                                <a href="https://www.linkedin.com/in/viniciuslimaan" target="_blank" rel="noreferrer">
                                     <Icon icon="akar-icons:linkedinv2-fill" />
                                 </a>
                             </div>
@@ -166,10 +166,10 @@ export default function Curriculum() {
             </Container>
             {/* ===== Footer ===== */}
             <Footer>
-                <a href="https://github.com/viniciuslima21" target="_blank" rel="noreferrer">
+                <a href="https://github.com/viniciuslimaan" target="_blank" rel="noreferrer">
                     <Icon icon='akar-icons:github-fill' />
                 </a>
-                <a href="https://www.linkedin.com/in/viniciuslima21/" target="_blank" rel="noreferrer">
+                <a href="https://www.linkedin.com/in/viniciuslimaan" target="_blank" rel="noreferrer">
                     <Icon icon="akar-icons:linkedinv2-fill" />
                 </a>
                 <img src={ImgRocket} alt="Imagem de um foguete" onClick={() => scrollTop()} />
