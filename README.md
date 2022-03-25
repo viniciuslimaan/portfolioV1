@@ -7,7 +7,7 @@ https://viniciuslima.herokuapp.com/
 Para visualizar em seu computador use:
 
 ```
-git clone https://github.com/viniciuslima21/portfolio.git
+git clone https://github.com/viniciuslimaan/portfolio.git
 ```
 
 ## Tecnologias utilizadas
