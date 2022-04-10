@@ -33,9 +33,9 @@ export const Type = styled.div`
 export const Title = styled.div`
     font-weight: 500;
     font-size: 1.4rem;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     color: ${props => props.theme.colors.white};
-    ${props => props.disable && `opacity: .7;`};
+    ${props => props.disable && `opacity: .8;`};
 `
 
 export const Link = styled.a`

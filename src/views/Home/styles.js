@@ -53,7 +53,7 @@ export const CardDownloadCv = styled.div`
         font-weight: 600;
         color: ${props => props.theme.colors.white};
         background: ${props => props.theme.colors.darkYellow};
-        border: 1px solid ${props => props.theme.colors.darkYellow};
+        outline: 2px solid ${props => props.theme.colors.yellow};
         padding: 12px 32px;
         cursor: pointer;
         margin: 5px;
@@ -67,7 +67,7 @@ export const CardDownloadCv = styled.div`
 
     a#btnOutline {
         background: transparent;
-        color: ${props => props.theme.colors.darkYellow};
+        color: ${props => props.theme.colors.yellow};
 
         &:hover {
             color: ${props => props.theme.colors.bg};
