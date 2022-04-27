@@ -48,7 +48,7 @@ export default function Portfolio() {
                     </SRLWrapper>
                     </SimpleReactLightbox>
                 </Row>
-                <LinkGit>Você pode encontrar mais projetos no meu <a href="https://github.com/viniciuslima21" target="_blank" rel="noreferrer">GitHub</a>.</LinkGit>
+                <LinkGit>Você pode encontrar mais projetos no meu <a href="https://github.com/viniciuslimaan" target="_blank" rel="noreferrer">GitHub</a>.</LinkGit>
             </ScrollAnimation>
         </Container>
     )
