@@ -150,6 +150,7 @@ export default function Home() {
                         <Skill icon='simple-icons:mongodb' title='MongoDB' />
                         <Skill icon='simple-icons:git' title='Git' />
                         <Skill icon='simple-icons:github' title='GitHub' />
+                        <Skill icon='akar-icons:figma-fill' title='Figma' />
                         <Skill icon='cib:adobe-photoshop' title='Photoshop' />
                     </Skills>
                 </ScrollAnimation>
