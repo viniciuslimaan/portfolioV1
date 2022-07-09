@@ -23,3 +23,11 @@ git clone https://github.com/viniciuslimaan/portfolio.git
     * Jsonwebtoken
     * React-toastify
     * Simple-react-lightbox
+
+## Variáveis de ambiente
+Para utilizar essa aplicação, será necessário a criação de um arquivo ".env" na pasta raiz do projeto com as seguintes variáveis: 
+
+```
+REACT_APP_API_URL=(URL da API. Ex: http://localhost:3333)
+REACT_APP_SECRET_TOKEN=(Algum texto aleatório que seja o mesmo colocado no token da API. Ex: 5fg1h5fdg1hf5dgh41fd5g)
+```
