@@ -2,7 +2,7 @@
 Front-End do meu portfólio oficial.
 
 Deploy do projeto:
-https://viniciuslima.herokuapp.com/
+https://viniciuslima.herokuapp.com
 
 Para visualizar em seu computador use:
 
