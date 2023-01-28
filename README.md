@@ -1,13 +1,10 @@
 # Portfólio (Front-End)
-Front-End do meu portfólio oficial.
-
-Deploy do projeto:
-https://viniciuslima.herokuapp.com
+Front-End do meu antigo portfólio.
 
 Para visualizar em seu computador use:
 
 ```
-git clone https://github.com/viniciuslimaan/portfolio.git
+git clone https://github.com/viniciuslimaan/oldPortfolio.git
 ```
 
 ## Tecnologias utilizadas
